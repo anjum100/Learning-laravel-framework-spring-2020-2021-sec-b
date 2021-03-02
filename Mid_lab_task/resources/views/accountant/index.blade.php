@@ -2,7 +2,7 @@
 
 
 @section('page_title')    
-<h1>Welcome Admin! {{ session('username') }} </h1>
+<h1>Welcome  {{ session('username') }} </h1>
 @endsection
 
 

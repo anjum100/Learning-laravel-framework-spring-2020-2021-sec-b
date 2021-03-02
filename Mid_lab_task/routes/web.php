@@ -26,6 +26,14 @@ Route::post('/registration', 'RegisterController@store');
 Route::get('/admin','AdminController@index');
 
 Route::get('/logout', 'LogoutController@index');
+
+
+Route::get('/customer', 'CustomerController@index');
+
+Route::get('/sales', 'SalesController@index');
+Route::get('/system/sales/physical_store', 'SalesController@physicalStore');
+Route::get('/system/sales/virtual_store', 'SalesController@virtualStore');
+Route::get('/system/sales/e-marketing', 'SalesController@emarketing');
 //Route::get('/home', 'HomeController@index');
 
 Route::group(['middleware'=> 'sess'], function(){
@@ -39,6 +47,34 @@ Route::group(['middleware'=> 'sess'], function(){
     Route::get('/home/delete/{id}', 'HomeController@delete');
     Route::post('/home/delete/{id}', 'HomeController@destroy');
     Route::get('/home/details/{id}', 'HomeController@show');
+
+    Route::get('/admin/create', 'AdminController@create')->middleware('sess')->name('home.create');
+    Route::post('/admin/create', 'AdminControlle@store');
+    Route::get('/admin/userlist', 'AdminControlle@userlist')->name('admin.userlist');
+    Route::get('/admin/edit/{id}', 'AdminController@edit')->name('admin.edit');
+    Route::post('/admin/edit/{id}', 'AdminController@update');
+    Route::get('/admin/delete/{id}', 'AdminController@delete');
+    Route::post('/admin/delete/{id}', 'AdminController@destroy');
+    Route::get('/admin/details/{id}', 'AdminControlle@show');
+
+
+    Route::get('/customer/create', 'CustomerController@create')->middleware('sess')->name('customer.create');
+    Route::post('/customer/create', 'CustomerControlle@store');
+    Route::get('/customer/userlist', 'CustomerControlle@userlist')->name('customer.userlist');
+    Route::get('/customer/edit/{id}', 'CustomerController@edit')->name('customer.edit');
+    Route::post('/customer/edit/{id}', 'CustomerController@update');
+    Route::get('/customer/delete/{id}', 'CustomerController@delete');
+    Route::post('/customer/delete/{id}', 'CustomerController@destroy');
+    Route::get('/customer/details/{id}', 'CustomerControlle@show');
+
+    Route::get('/accountant/create', 'AccountantController@create')->middleware('sess')->name('accountant.create');
+    Route::post('/accountant/create', 'AccountantControlle@store');
+    Route::get('/accountant/userlist', 'AccountantControlle@userlist')->name('accountant.userlist');
+    Route::get('/accountant/edit/{id}', 'AccountantController@edit')->name('accountant.edit');
+    Route::post('/accountant/edit/{id}', 'AccountantController@update');
+    Route::get('/accountant/delete/{id}', 'AccountantController@delete');
+    Route::post('/accountant/delete/{id}', 'AccountantController@destroy');
+    Route::get('/accountantr/details/{id}', 'AccountantControlle@show');
 
     Route::resource('/product', 'ProductController');
     //Route::get('/product/abc/{id}', 'ProductController@xyz');

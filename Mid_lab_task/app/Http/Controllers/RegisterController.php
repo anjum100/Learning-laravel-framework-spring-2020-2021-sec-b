@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\UserRequest;
+use App\Http\Requests\RegistrationRequest;
 use App\User;
 
 class RegisterController extends Controller
@@ -30,6 +30,6 @@ class RegisterController extends Controller
         $user->type        = $req->type ;
      
         $user->save();
-        //return redirect()->route('{{route('registration')}}');
+        return redirect('/login');
     }
 }
