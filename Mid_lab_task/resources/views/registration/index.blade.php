@@ -62,20 +62,21 @@
              
           
            
-            <legend> <b>User Type </b> </legend>
+             <b>User Type </b> <br>
+
+            <select name='type'>
+                        <option> </option>
+                        <option value="customer">Customer</option>
+                        <option value="accoutant">Accounant</option>
+                        <option value="Sales&marketing">Sales & Marketing person</option>
+                    </select>
+                    
+                    
+
             
 
-
-             <input type="radio" name="UserType" value="Admin" > <b>Admin </b>
-             <input type="radio" name="UserType" value="Customer" > <b> Customer </b>
-
-             <input type="radio" name="UserType" value="Accountant" > <b>Accountant </b>
-            <input type="radio" name="UserType" value="Sales and Marketing Person"  > <b> Sales and Marketing Person </b>
-            <input type="radio" name="UserType" value="Business Partner" > <b>Business Partner </b>
-             <input type="radio" name="UserType" value="Vendors" > <b> Vendors </b>
-
              
-                <br> <br>
+                <br> 
             <hr>
             
         
