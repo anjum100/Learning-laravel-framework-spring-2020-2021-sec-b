@@ -14,16 +14,21 @@ class RegisterController extends Controller
 
     public function store(Request $req){
         $user = new User();
-        $user->username     = $req->username;
-        $user->fullname     = $req->fullname;
-        $user->password     = $req->password;
-        $user->address      = $req->address;
-        $user->email         = $req->email;
+        $user->FirstaName     = $req->FirstaName;
+        $user->Lastname     = $req->Lastname;
+        $user->dob    = $req->dob ;
+        $user->gender     = $req->gender;
+        $user->adress    = $req->adress;
+        $user->companyName      = $req->companyName;
+        $user->country      = $req->country;
+        
         $user->phone         = $req->phone;
-        $user->company_name  = $req->company;
-        $user->city          = $req->city;
-        $user->country       = $req->country;
-        $user->role       = $req->role;
+        $user->email         = $req->email;
+        $user->username  = $req->username;
+        $user-> password         = $req->password;
+        $user->conPassword       = $req->conPassword;
+        $user->type        = $req->type ;
+     
         $user->save();
         //return redirect()->route('{{route('registration')}}');
     }

@@ -38,12 +38,10 @@
             <input type="text" name="adress" value=""><br>
 
             <b>Company Name</b><br>
-            <input> <select name='type'>
-							<option value="admin"> ADMIN </option>
-							<option value="user"> USER </option>
-						</select>
+            <input type="text" name="company name" value=""><br>
 
-            
+            <b>Country</b><br>
+            <input type="text" name="country" value=""><br>
            
             <b>Phone Number</b><br>
             <input type="Number" name="phoneNumber" value=""><br>
@@ -69,10 +67,14 @@
 
 
              <input type="radio" name="UserType" value="Admin" > <b>Admin </b>
-             <input type="radio" name="UserType" value="Volunteer" > <b> Volunteer </b>
+             <input type="radio" name="UserType" value="Customer" > <b> Customer </b>
 
-             <input type="radio" name="UserType" value="Donator" > <b>Donator </b>
-            <input type="radio" name="UserType" value="Consumer"  > <b> Consumer </b>
+             <input type="radio" name="UserType" value="Accountant" > <b>Accountant </b>
+            <input type="radio" name="UserType" value="Sales and Marketing Person"  > <b> Sales and Marketing Person </b>
+            <input type="radio" name="UserType" value="Business Partner" > <b>Business Partner </b>
+             <input type="radio" name="UserType" value="Vendors" > <b> Vendors </b>
+
+             
                 <br> <br>
             <hr>
             
