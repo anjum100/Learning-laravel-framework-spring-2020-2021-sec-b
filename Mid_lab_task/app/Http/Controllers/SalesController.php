@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Sales;
-use App\emarketing;
-use App\Http\virtualStore;;
 use Illuminate\Http\Request;
+use App\Ecommerce;
+use App\PhysicalStore;
+use App\SocialMedia;
+//use DateTime;
+use Validator;
+use Illuminate\Support\Facades\DB;
+use App\Http\Requests\ProductRequest;
 
 class SalesController extends Controller
 {
@@ -19,22 +23,22 @@ class SalesController extends Controller
         return view('sales.index');
     }
 
-    public function physicalStore()
+    public function physical_store()
     {
-        $Product = Sales::all();
-        return view('sales.physicalStore')->with('list', $product);
+        $product = Sales::all();
+        return view('sales/physical_store')->with('list', $product);
     }
 
-    public function virtualStore()
+    public function social_media()
     {
-        $product = virtualStore::all();
-        return view('sales/virtual_store')->with('list', $product);
+        $product = socialMedia::all();
+        return view('sales/social_media')->with('list', $product);
     }
 
-    public function emarketing()
+    public function ecommerce()
     {
-        $product = emarketing::all();
-        return view('sales/e-marketing')->with('list', $product);
+        $product = ecommerce::all();
+        return view('sales/ecommerce')->with('list', $product);
     }
 
     /**
@@ -61,7 +65,7 @@ class SalesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Sales  $sales
+     * @param  \App\Models\Sales  $sales
      * @return \Illuminate\Http\Response
      */
     public function show(Sales $sales)
@@ -72,7 +76,7 @@ class SalesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Sales  $sales
+     * @param  \App\Models\Sales  $sales
      * @return \Illuminate\Http\Response
      */
     public function edit(Sales $sales)
@@ -84,7 +88,7 @@ class SalesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Sales  $sales
+     * @param  \App\Models\Sales  $sales
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Sales $sales)
@@ -95,7 +99,7 @@ class SalesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Sales  $sales
+     * @param  \App\Models\Sales  $sales
      * @return \Illuminate\Http\Response
      */
     public function destroy(Sales $sales)

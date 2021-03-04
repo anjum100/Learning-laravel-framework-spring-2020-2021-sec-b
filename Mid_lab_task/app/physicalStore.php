@@ -2,13 +2,14 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Sales extends Model
+class SalesController extends Model
 {
-    //use HasFactory;
+    
     protected $table = 'physical_store';
-    public $timestamps = false;
     protected $primaryKey = 'product_id';
+
+    public $timestamps = false;
+
 }

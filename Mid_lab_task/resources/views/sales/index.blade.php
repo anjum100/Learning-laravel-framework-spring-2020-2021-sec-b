@@ -8,9 +8,9 @@
 </head>
 <body>
     <h1>Sales channel</h1>
-    <a href="/system/sales/physical_store">|  Physical store   |</a>
-    <a href="/system/sales/virtual_store">|  Virtual Store  |</a>
-    <a href="/system/sales/e-marketing">|  E-Marketing |</a><br><br>
+    <a href="/sales/physical_store">  Physical store   |</a>
+    <a href="/sales/social_media">|  Social media  |</a>
+    <a href="/sales/ecommerce">|  E-commerce</a><br><br>
 
     <a href="/logout">Logout</a>
 </body>

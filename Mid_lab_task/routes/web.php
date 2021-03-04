@@ -22,7 +22,7 @@ Route::post('/login', 'LoginController@verify');
 
 
 Route::get('/registration', 'RegisterController@index')->name("registration");
-Route::post('/registration', 'RegisterController@store');
+Route::post('/registration', 'RegisterController@verify');
 Route::get('/admin','AdminController@index');
 
 Route::get('/logout', 'LogoutController@index');
