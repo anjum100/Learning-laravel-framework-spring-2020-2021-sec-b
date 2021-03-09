@@ -54,10 +54,14 @@
 				<tr>
 					<td>User Type</td>
 					<td>
-						<select name='user_type'>
-							<option value="Active"> ACTIVE </option>
-							<option value="Inactive"> INACTIVE </option>
-						</select>
+						
+            <select name='user_type'>
+                        <option> </option>
+                        <option value="customer">Customer</option>
+                        <option value="accoutant">Accounant</option>
+                        <option value="Sales&marketing">Sales & Marketing person</option>
+                    </select>
+                    
 					</td>
 				</tr>
 				<tr>
