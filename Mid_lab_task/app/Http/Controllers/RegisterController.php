@@ -11,7 +11,7 @@ class RegisterController extends Controller
 {
     public function index( Request $req){
 
-        $name = "emon";
+        $name = "mishu";
         $id = "123";
 
         //return view('home.index', ['name'=> 'xyz', 'id'=>12]);
@@ -30,29 +30,7 @@ class RegisterController extends Controller
 
     public function verify(UserRequest $req){
 
-/*
-        $this->validate($req, [
-            'username' => 'required|max:5',
-            'password' => 'required|min:6'
-        ])->validate();*/
 
-        /*$req->validate([
-            'username' => 'required|max:5',
-            'password' => 'required|min:6'
-        ])->validate();*/
-
-        //$validation->validate();
-
-        /*$validation = Validator::make($req->all(), [
-            'username' => 'required|max:5',
-            'password' => 'required|min:6'
-        ]);
-
-        if($validation->fails()){
-         //   return redirect()->route('home.create')->with('errors', $validation->errors());
-
-            return Back()->with('errors', $validation->errors())->withInput();            
-        }*/
 
             $user = new Customer();
             $user->full_name     = $req->full_name;
