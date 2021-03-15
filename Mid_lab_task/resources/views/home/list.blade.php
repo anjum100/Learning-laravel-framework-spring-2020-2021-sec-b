@@ -26,6 +26,7 @@ USER LIST :: ABC.com
             <td>PASSWORD</td>
             <td>TYPE</td>
             <td>Action</td>
+             <td>Profile</td>
         </tr>
 
         @for($i=0; $i < count($list); $i++)
@@ -35,9 +36,11 @@ USER LIST :: ABC.com
             <td>{{ $list[$i]['password'] }}</td>
             <td>{{ $list[$i]['type'] }}</td>
             <td>
-                <a href="{{ route('home.edit', [$list[$i]['userId']]) }}">Edit</a> |
+                <a href="{{ route('home.edit', [$list[$i]['userId']]) }}">Edit</a>
+
                 <a href="/home/delete/{{ $list[$i]['userId'] }}">Delete</a> |
                 <a href="/home/details/{{ $list[$i]['userId'] }}">Details</a>
+                
             </td>
         </tr>
         @endfor

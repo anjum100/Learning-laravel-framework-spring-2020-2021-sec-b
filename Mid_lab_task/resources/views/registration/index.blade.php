@@ -6,13 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registration</title>
     <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
+
 </head>
 <body>
 
-<h1>Client Management System</h1>
+<h2 align="center">Client Management System</h2>
 
 
-    <h1>Create New Account</h1>
+    <h3 align="center">Create New Account</h3>
+
+    <h3 align="center">Alrady registered? Click Login </h3>
+    <h3 align="center"><a href="/login"  >Login</a></h3>
+
+    <h1 align="center">Registration</h1>
+
 
     <form method="post" enctype="multipart/form-data">
     	@csrf
@@ -20,6 +27,7 @@
 			<legend>Registration</legend>
 			<table>
 				<tr>
+
 					<td>Username</td>
 					<td><input type="text" name="username" value="{{old('username')}}"></td>
 				</tr>
@@ -54,12 +62,13 @@
 				<tr>
 					<td>User Type</td>
 					<td>
-						
-            <select name='user_type'>
+					
+            <select name='type'>
                         <option> </option>
-                        <option value="customer">Customer</option>
-                        <option value="accoutant">Accounant</option>
-                        <option value="Sales&marketing">Sales & Marketing person</option>
+                        <option value="admin">Admin</option>
+                        <option value="Specialist">Specialist</option>
+                        <option value="user">User</option>
+                        <option value="Saler">Saler</option>
                     </select>
                     
 					</td>
@@ -69,8 +78,10 @@
 					<td><input type="date" name="date_added" value="{{old('date_added')}}"></td>
 					<td></td>
 					<td><input type="submit" name="submit" value="Register"></td>
+
 				</tr>
 			</table>
+			
 		</fieldset>
 	</form>
 

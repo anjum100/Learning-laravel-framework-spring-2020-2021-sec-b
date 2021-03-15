@@ -15,10 +15,6 @@
 		<fieldset>
 			<legend>Add</legend>
 			<table>
-
-
-			
-			
 				<tr>
 					<td>Username</td>
 					<td><input type="text" name="username" value="{{old('username')}}"></td>
@@ -58,7 +54,6 @@
 				<tr>
 					<td></td>
 					<td><input type="submit" name="submit" value="Save"></td>
-					
 				</tr>
 			</table>
 		</fieldset>

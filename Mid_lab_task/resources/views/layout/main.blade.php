@@ -20,8 +20,6 @@
 			@yield('main_content')
 	</div>
 
-	
-
 	<div id="footer">
 		copyright@2021
 	</div>
