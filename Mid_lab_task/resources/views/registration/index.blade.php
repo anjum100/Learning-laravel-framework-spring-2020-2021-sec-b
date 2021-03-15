@@ -66,9 +66,10 @@
             <select name='type'>
                         <option> </option>
                         <option value="admin">Admin</option>
-                        <option value="Specialist">Specialist</option>
-                        <option value="user">User</option>
-                        <option value="Saler">Saler</option>
+                        <option value="customer">Customer</option>
+                        <option value="accountant">Accountant</option>
+                        <option value="Sales and Marketing Person">Sales and Marketing Person</option>
+                        <option value="Business Partner">Business Partner</option>
                     </select>
                     
 					</td>
