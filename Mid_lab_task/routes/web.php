@@ -43,6 +43,9 @@ Route::group(['middleware'=> 'sess'], function(){
     Route::post('/home/create', 'HomeController@store');
     Route::get('/home/userlist', 'HomeController@userlist')->name('home.userlist');
     Route::get('/home/edit/{id}', 'HomeController@edit')->name('home.edit');
+
+    Route::get('/home/profile/', 'HomeController@profile');
+   
     Route::post('/home/edit/{id}', 'HomeController@update');
     Route::get('/home/delete/{id}', 'HomeController@delete');
     Route::post('/home/delete/{id}', 'HomeController@destroy');

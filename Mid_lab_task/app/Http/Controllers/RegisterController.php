@@ -30,7 +30,29 @@ class RegisterController extends Controller
 
     public function verify(UserRequest $req){
 
+/*
+        $this->validate($req, [
+            'username' => 'required|max:5',
+            'password' => 'required|min:6'
+        ])->validate();*/
 
+        /*$req->validate([
+            'username' => 'required|max:5',
+            'password' => 'required|min:6'
+        ])->validate();*/
+
+        //$validation->validate();
+
+        /*$validation = Validator::make($req->all(), [
+            'username' => 'required|max:5',
+            'password' => 'required|min:6'
+        ]);
+
+        if($validation->fails()){
+         //   return redirect()->route('home.create')->with('errors', $validation->errors());
+
+            return Back()->with('errors', $validation->errors())->withInput();            
+        }*/
 
             $user = new Customer();
             $user->full_name     = $req->full_name;
@@ -42,7 +64,7 @@ class RegisterController extends Controller
             $user->city          = $req->city;
             $user->company_name = $req->company_name;
             $user->user_type = $req->user_type;
-            $user->date_added = $req->date_added;
+            $user->date_added = $req->date;
             $user->save();
 
             $req->session()->flash('msg','Account created successfully!');

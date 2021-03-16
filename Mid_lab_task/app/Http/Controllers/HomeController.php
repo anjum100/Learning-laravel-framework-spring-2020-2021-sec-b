@@ -11,7 +11,7 @@ class HomeController extends Controller
 {
     public function index( Request $req){
 
-        $name = "mishu";
+        $name = "alamin";
         $id = "123";
 
         //return view('home.index', ['name'=> 'xyz', 'id'=>12]);
@@ -34,9 +34,17 @@ class HomeController extends Controller
         return view('home.details')->with('user', $user);
     }
 
+
     public function create(){
         return view('home.create');
     }
+
+    
+
+    public function profile(){
+        return view('home.profile');
+    }
+
 
     public function store(UserRequest $req){
 
@@ -120,14 +128,16 @@ class HomeController extends Controller
         return view('home.list')->with('list', $userlist);
     }
 
-    /*public function getUserlist (){
 
-        return [
+
+    public function profileView (){
+
+        $profileView= [
                 ['id'=>1, 'name'=>'alamin', 'email'=> 'alamin@aiub.edu', 'password'=>'123'],
-                ['id'=>2, 'name'=>'abc', 'email'=> 'abc@aiub.edu', 'password'=>'456'],
-                ['id'=>3, 'name'=>'xyz', 'email'=> 'xyz@aiub.edu', 'password'=>'789']
+                
             ];
-    }*/
+              return view('home.profile')->with('profile', $profileView);
+    }
 
     public function delete($id){
 
